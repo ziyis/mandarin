@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1698298430146272}
+  m_IsPrefabParent: 1
+--- !u!1 &1698298430146272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4151018237398932}
+  - component: {fileID: 114170147583067378}
+  - component: {fileID: 114676961245066362}
+  - component: {fileID: 114567587717926830}
+  - component: {fileID: 114120904259271346}
+  m_Layer: 0
+  m_Name: WatsonListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4151018237398932
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698298430146272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 359, y: 202, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114120904259271346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698298430146272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e264949df098d43a905c6bf2efaedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Connection: localhost
+  ConnectOnStart: 1
+  RelaxedSslValidation: 0
+  WriteToConsole: 0
+  ExchangeSubscriptions:
+  - Name: One
+    Enabled: 1
+    ExchangeName: send_to_unity
+    ExchangeType: 2
+    RoutingKey: 
+    OnMessageReceived:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114567587717926830}
+          m_MethodName: OnMessageReceived
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpExchangeMessageReceivedUnityEvent,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  QueueSubscriptions: []
+  OnConnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDisconnecting:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBlocked:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnReconnecting:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnConnectionAborted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpClientUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnConnectionError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.ExceptionUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnSubscribedToExchange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpExchangeSubscriptionUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUnsubscribedFromExchange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpExchangeSubscriptionUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSubscribedToQueue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpQueueSubscriptionUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUnsubscribedFromQueue:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.AmqpQueueSubscriptionUnityEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnExchangeSubscribeError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.ExceptionUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnExchangeUnsubscribeError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.ExceptionUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnQueueSubscribeError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.ExceptionUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnQueueUnsubscribeError:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CymaticLabs.Unity3D.Amqp.ExceptionUnityEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114170147583067378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698298430146272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b44810db8fc5e041ad5d26ddc509a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agents:
+  - {fileID: 0}
+  - {fileID: 0}
+  ResultsField: {fileID: 0}
+  _microphoneID: 
+  _disable_watson: 0
+  initial_talking_to: One
+--- !u!114 &114567587717926830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698298430146272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2eb7ad5b10f3d64a9da7b7d3a70a095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114676961245066362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1698298430146272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb05603d61bde74f9c7bfa61149f0c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _watson_listener: {fileID: 114170147583067378}
+  _reenable_listener: 1
+  _disable_watson: 1
